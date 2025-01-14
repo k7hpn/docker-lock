@@ -1,0 +1,4 @@
+generate:
+  dockerfile-globs:
+  - '.devcontainer/Dockerfile*'
+  - 'Dockerfile*'
