@@ -5,7 +5,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/safe-waters/docker-lock/pkg/rewrite/write"
+	"github.com/dockerlocker/docker-lock/pkg/rewrite/write"
 )
 
 type renamer struct{}

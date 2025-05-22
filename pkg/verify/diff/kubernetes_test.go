@@ -3,7 +3,7 @@ package diff_test
 import (
 	"testing"
 
-	"github.com/safe-waters/docker-lock/pkg/verify/diff"
+	"github.com/dockerlocker/docker-lock/pkg/verify/diff"
 )
 
 func TestKubernetesfileDifferentiator(t *testing.T) {

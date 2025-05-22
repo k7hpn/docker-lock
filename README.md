@@ -1,13 +1,13 @@
-# Warning - This repo is a copy github.com/safe-waters/docker-lock.
+# Warning - This repo is a copy github.com/dockerlocker/docker-lock.
 # Nothing has been updated or should be expected to work.
 
 ![Docker-Lock-Banner](./docs/assets/readme-banner.png)
 # About
-![ci](https://github.com/safe-waters/docker-lock/workflows/ci/badge.svg)
-![cd-master](https://github.com/safe-waters/docker-lock/workflows/cd-master/badge.svg)
-![cd-tag](https://github.com/safe-waters/docker-lock/workflows/cd-tag/badge.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/safe-waters/docker-lock)](https://goreportcard.com/report/github.com/safe-waters/docker-lock)
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/safe-waters/docker-lock)](https://pkg.go.dev/github.com/safe-waters/docker-lock)
+![ci](https://github.com/dockerlocker/docker-lock/workflows/ci/badge.svg)
+![cd-master](https://github.com/dockerlocker/docker-lock/workflows/cd-master/badge.svg)
+![cd-tag](https://github.com/dockerlocker/docker-lock/workflows/cd-tag/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dockerlocker/docker-lock)](https://goreportcard.com/report/github.com/dockerlocker/docker-lock)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/dockerlocker/docker-lock)](https://pkg.go.dev/github.com/dockerlocker/docker-lock)
 
 `docker-lock` is a cli tool that automates managing image digests by tracking
 them in a separate Lockfile (think package-lock.json or Pipfile.lock). With
@@ -89,7 +89,7 @@ in the future.
 `docker-lock` can be run as a
 * [cli-plugin](https://github.com/docker/cli/issues/1534) for `docker`
 * standalone executable without `docker`
-* prebuilt [image from Dockerhub](https://hub.docker.com/repository/docker/safewaters/docker-lock)
+* prebuilt [image from Dockerhub](https://hub.docker.com/repository/docker/dockerlocker/docker-lock)
 
 ## Cli-plugin
 Ensure `docker` cli version >= 19.03 is installed by running `docker --version`.
@@ -97,7 +97,7 @@ Ensure `docker` cli version >= 19.03 is installed by running `docker --version`.
 ### Linux / Mac
 ```bash
 $ mkdir -p "${HOME}/.docker/cli-plugins"
-$ curl -fsSL "https://github.com/safe-waters/docker-lock/releases/download/v${VERSION}/docker-lock_${VERSION}_${OS}_${ARCH}.tar.gz" | tar -xz -C "${HOME}/.docker/cli-plugins" "docker-lock"
+$ curl -fsSL "https://github.com/dockerlocker/docker-lock/releases/download/v${VERSION}/docker-lock_${VERSION}_${OS}_${ARCH}.tar.gz" | tar -xz -C "${HOME}/.docker/cli-plugins" "docker-lock"
 $ chmod +x "${HOME}/.docker/cli-plugins/docker-lock"
 ```
 
@@ -129,32 +129,32 @@ the `${VERSION}` tag, you will use the latest, nightly build from the master bra
 ### Linux / Mac
 * Without your `docker` config:
 ```bash
-$ docker run -v "${PWD}":/run safewaters/docker-lock:${VERSION} [commands]
+$ docker run -v "${PWD}":/run dockerlocker/docker-lock:${VERSION} [commands]
 ```
 * With your `docker` config:
 ```bash
-$ docker run -v "${HOME}/.docker/config.json":/.docker/config.json:ro -v "${PWD}":/run safewaters/docker-lock:${VERSION} [commands]
+$ docker run -v "${HOME}/.docker/config.json":/.docker/config.json:ro -v "${PWD}":/run dockerlocker/docker-lock:${VERSION} [commands]
 ```
 ### Windows
 * Without your `docker` config:
 ```bash
-$ docker run -v "%cd%":/run safewaters/docker-lock:${VERSION} [commands]
+$ docker run -v "%cd%":/run dockerlocker/docker-lock:${VERSION} [commands]
 ```
 * With your `docker` config:
 ```bash
-$ docker run -v "%USERPROFILE%\.docker\config.json":/.docker/config.json:ro -v "%cd%":/run safewaters/docker-lock:${VERSION} [commands]
+$ docker run -v "%USERPROFILE%\.docker\config.json":/.docker/config.json:ro -v "%cd%":/run dockerlocker/docker-lock:${VERSION} [commands]
 ```
 
 ### Available tags
 * By default, images are built from `scratch`. These images only contain
 the `docker-lock` executable and are tagged as follows:
-    * `safewaters/docker-lock:${VERSION}`
-    * `safewaters/docker-lock`
+    * `dockerlocker/docker-lock:${VERSION}`
+    * `dockerlocker/docker-lock`
 * If you need a shell alongside the executable (as is required by some CI/CD
 providers such as Gitlab), images built from `alpine` are provided. They
 are tagged as follows:
-    * `safewaters/docker-lock:${VERSION}-alpine`
-    * `safewaters/docker-lock:alpine`
+    * `dockerlocker/docker-lock:${VERSION}-alpine`
+    * `dockerlocker/docker-lock:alpine`
 
 # Use
 ## Registries
