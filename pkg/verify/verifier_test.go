@@ -8,14 +8,14 @@ import (
 	"path/filepath"
 	"testing"
 
-	cmd_generate "github.com/safe-waters/docker-lock/cmd/generate"
-	cmd_verify "github.com/safe-waters/docker-lock/cmd/verify"
-	"github.com/safe-waters/docker-lock/internal/testutils"
-	"github.com/safe-waters/docker-lock/pkg/generate"
-	"github.com/safe-waters/docker-lock/pkg/generate/update"
-	"github.com/safe-waters/docker-lock/pkg/kind"
-	"github.com/safe-waters/docker-lock/pkg/verify"
-	"github.com/safe-waters/docker-lock/pkg/verify/diff"
+	cmd_generate "github.com/dockerlocker/docker-lock/cmd/generate"
+	cmd_verify "github.com/dockerlocker/docker-lock/cmd/verify"
+	"github.com/dockerlocker/docker-lock/internal/testutils"
+	"github.com/dockerlocker/docker-lock/pkg/generate"
+	"github.com/dockerlocker/docker-lock/pkg/generate/update"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/verify"
+	"github.com/dockerlocker/docker-lock/pkg/verify/diff"
 )
 
 func TestVerifier(t *testing.T) {

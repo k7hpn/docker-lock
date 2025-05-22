@@ -4,8 +4,8 @@ package rewrite
 import (
 	"io"
 
-	"github.com/safe-waters/docker-lock/pkg/kind"
-	"github.com/safe-waters/docker-lock/pkg/rewrite/write"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/rewrite/write"
 )
 
 // IPreprocessor provides an interface for Preprocessors, which are responsible

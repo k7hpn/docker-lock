@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/safe-waters/docker-lock/cmd/rewrite"
-	"github.com/safe-waters/docker-lock/internal/testutils"
+	"github.com/dockerlocker/docker-lock/cmd/rewrite"
+	"github.com/dockerlocker/docker-lock/internal/testutils"
 )
 
 func TestFlags(t *testing.T) {

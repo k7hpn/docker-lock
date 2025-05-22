@@ -12,12 +12,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/safe-waters/docker-lock/cmd/docker"
-	"github.com/safe-waters/docker-lock/cmd/generate"
-	"github.com/safe-waters/docker-lock/cmd/lock"
-	"github.com/safe-waters/docker-lock/cmd/rewrite"
-	"github.com/safe-waters/docker-lock/cmd/verify"
-	"github.com/safe-waters/docker-lock/cmd/version"
+	"github.com/dockerlocker/docker-lock/cmd/docker"
+	"github.com/dockerlocker/docker-lock/cmd/generate"
+	"github.com/dockerlocker/docker-lock/cmd/lock"
+	"github.com/dockerlocker/docker-lock/cmd/rewrite"
+	"github.com/dockerlocker/docker-lock/cmd/verify"
+	"github.com/dockerlocker/docker-lock/cmd/version"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -26,7 +26,7 @@ func main() {
 	if len(os.Args) > 1 && os.Args[1] == "docker-cli-plugin-metadata" {
 		m := map[string]string{
 			"SchemaVersion":    "0.1.0",
-			"Vendor":           "https://github.com/safe-waters/docker-lock",
+			"Vendor":           "https://github.com/dockerlocker/docker-lock",
 			"Version":          version.Version,
 			"ShortDescription": "Manage Lockfiles",
 		}

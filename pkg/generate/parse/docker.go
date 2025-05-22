@@ -8,8 +8,8 @@ import (
 	"sync"
 
 	"github.com/moby/buildkit/frontend/dockerfile/parser"
-	"github.com/safe-waters/docker-lock/pkg/generate/collect"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/generate/collect"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 type dockerfileImageParser struct {

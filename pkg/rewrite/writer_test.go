@@ -6,10 +6,10 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/safe-waters/docker-lock/internal/testutils"
-	"github.com/safe-waters/docker-lock/pkg/kind"
-	"github.com/safe-waters/docker-lock/pkg/rewrite"
-	"github.com/safe-waters/docker-lock/pkg/rewrite/write"
+	"github.com/dockerlocker/docker-lock/internal/testutils"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/rewrite"
+	"github.com/dockerlocker/docker-lock/pkg/rewrite/write"
 )
 
 func TestWriter(t *testing.T) {

@@ -4,12 +4,12 @@ import (
 	"errors"
 
 	"github.com/compose-spec/compose-go/cli"
-	"github.com/safe-waters/docker-lock/pkg/generate"
-	"github.com/safe-waters/docker-lock/pkg/generate/collect"
-	"github.com/safe-waters/docker-lock/pkg/generate/format"
-	"github.com/safe-waters/docker-lock/pkg/generate/parse"
-	"github.com/safe-waters/docker-lock/pkg/generate/update"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/generate"
+	"github.com/dockerlocker/docker-lock/pkg/generate/collect"
+	"github.com/dockerlocker/docker-lock/pkg/generate/format"
+	"github.com/dockerlocker/docker-lock/pkg/generate/parse"
+	"github.com/dockerlocker/docker-lock/pkg/generate/update"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 // DefaultPathCollector creates an IPathCollector that works with Dockerfiles,

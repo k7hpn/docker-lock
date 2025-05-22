@@ -8,10 +8,10 @@ import (
 	"io/ioutil"
 	"os"
 
-	cmd_generate "github.com/safe-waters/docker-lock/cmd/generate"
-	"github.com/safe-waters/docker-lock/pkg/kind"
-	"github.com/safe-waters/docker-lock/pkg/verify"
-	"github.com/safe-waters/docker-lock/pkg/verify/diff"
+	cmd_generate "github.com/dockerlocker/docker-lock/cmd/generate"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/verify"
+	"github.com/dockerlocker/docker-lock/pkg/verify/diff"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

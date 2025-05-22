@@ -2,8 +2,8 @@
 package format
 
 import (
-	"github.com/safe-waters/docker-lock/pkg/generate/parse"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/generate/parse"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 // IImageFormatter provides an interface for ImageFormatters, which

@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/safe-waters/docker-lock/pkg/generate/parse"
+	"github.com/dockerlocker/docker-lock/pkg/generate/parse"
 )
 
 type imageDigestUpdater struct {

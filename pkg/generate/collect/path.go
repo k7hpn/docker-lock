@@ -1,6 +1,6 @@
 package collect
 
-import "github.com/safe-waters/docker-lock/pkg/kind"
+import "github.com/dockerlocker/docker-lock/pkg/kind"
 
 type path struct {
 	kind kind.Kind

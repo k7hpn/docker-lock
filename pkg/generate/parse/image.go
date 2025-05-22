@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 type image struct {

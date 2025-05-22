@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/safe-waters/docker-lock/pkg/rewrite"
-	"github.com/safe-waters/docker-lock/pkg/rewrite/preprocess"
-	"github.com/safe-waters/docker-lock/pkg/rewrite/write"
+	"github.com/dockerlocker/docker-lock/pkg/rewrite"
+	"github.com/dockerlocker/docker-lock/pkg/rewrite/preprocess"
+	"github.com/dockerlocker/docker-lock/pkg/rewrite/write"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

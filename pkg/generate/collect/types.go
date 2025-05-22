@@ -1,7 +1,7 @@
 // Package collect provides functionality to collect file paths for processing.
 package collect
 
-import "github.com/safe-waters/docker-lock/pkg/kind"
+import "github.com/dockerlocker/docker-lock/pkg/kind"
 
 // IPathCollector provides an interface for PathCollectors,
 // which collect paths to be processed downstream.

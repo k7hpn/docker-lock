@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/safe-waters/docker-lock/pkg/generate"
-	"github.com/safe-waters/docker-lock/pkg/kind"
-	"github.com/safe-waters/docker-lock/pkg/verify/diff"
+	"github.com/dockerlocker/docker-lock/pkg/generate"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/verify/diff"
 )
 
 type verifier struct {

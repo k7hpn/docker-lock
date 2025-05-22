@@ -4,8 +4,8 @@ import (
 	"errors"
 	"reflect"
 
-	"github.com/safe-waters/docker-lock/pkg/kind"
-	"github.com/safe-waters/docker-lock/pkg/rewrite/preprocess"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/rewrite/preprocess"
 )
 
 type preprocessor struct {

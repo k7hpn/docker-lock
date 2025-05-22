@@ -4,8 +4,8 @@ package parse
 import (
 	"sync"
 
-	"github.com/safe-waters/docker-lock/pkg/generate/collect"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/generate/collect"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 // IImage provides an interface for Images.

@@ -4,9 +4,9 @@ package generate
 import (
 	"io"
 
-	"github.com/safe-waters/docker-lock/pkg/generate/collect"
-	"github.com/safe-waters/docker-lock/pkg/generate/parse"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/generate/collect"
+	"github.com/dockerlocker/docker-lock/pkg/generate/parse"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 // IGenerator provides an interface for Generators, which are responsible
