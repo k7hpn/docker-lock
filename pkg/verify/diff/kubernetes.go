@@ -3,7 +3,7 @@ package diff
 import (
 	"errors"
 
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 type kubernetesfileImageDifferentiator struct {

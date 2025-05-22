@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/safe-waters/docker-lock/internal/testutils"
-	"github.com/safe-waters/docker-lock/pkg/generate"
-	"github.com/safe-waters/docker-lock/pkg/generate/collect"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/internal/testutils"
+	"github.com/dockerlocker/docker-lock/pkg/generate"
+	"github.com/dockerlocker/docker-lock/pkg/generate/collect"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 func TestPathCollector(t *testing.T) {

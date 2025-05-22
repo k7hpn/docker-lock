@@ -13,15 +13,15 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/safe-waters/docker-lock/pkg/generate/collect"
-	"github.com/safe-waters/docker-lock/pkg/generate/parse"
-	"github.com/safe-waters/docker-lock/pkg/generate/update"
+	"github.com/dockerlocker/docker-lock/pkg/generate/collect"
+	"github.com/dockerlocker/docker-lock/pkg/generate/parse"
+	"github.com/dockerlocker/docker-lock/pkg/generate/update"
 )
 
 const (
-	BusyboxLatestSHA = "bae015c28bc7cdee3b7ef20d35db4299e3068554a769070950229d9f53f58572" // nolint: lll
-	GolangLatestSHA  = "6cb55c08bbf44793f16e3572bd7d2ae18f7a858f6ae4faa474c0a6eae1174a5d" // nolint: lll
-	RedisLatestSHA   = "09c33840ec47815dc0351f1eca3befe741d7105b3e95bc8fdb9a7e4985b9e1e5" // nolint: lll
+	BusyboxLatestSHA = "bae015c28bc7cdee3b7ef20d35db4299e3068554a769070950229d9f53f58572" //nolint:lll
+	GolangLatestSHA  = "6cb55c08bbf44793f16e3572bd7d2ae18f7a858f6ae4faa474c0a6eae1174a5d" //nolint:lll
+	RedisLatestSHA   = "09c33840ec47815dc0351f1eca3befe741d7105b3e95bc8fdb9a7e4985b9e1e5" //nolint:lll
 )
 
 type mockDigestRequester struct {
@@ -169,7 +169,7 @@ func AssertNumNetworkCallsEqual(t *testing.T, expected uint64, got uint64) {
 func MakeDir(t *testing.T, dirPath string) {
 	t.Helper()
 
-	err := os.MkdirAll(dirPath, 0777) // nolint: gomnd
+	err := os.MkdirAll(dirPath, 0777) //nolint:mnd
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -241,7 +241,7 @@ func WriteFilesToTempDir(
 		fullPath := filepath.Join(tempDir, name)
 
 		if err := ioutil.WriteFile(
-			fullPath, fileContents[i], 0777, // nolint: gomnd
+			fullPath, fileContents[i], 0777, //nolint:mnd
 		); err != nil {
 			t.Fatal(err)
 		}

@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/safe-waters/docker-lock/cmd/generate"
-	"github.com/safe-waters/docker-lock/internal/testutils"
+	"github.com/dockerlocker/docker-lock/cmd/generate"
+	"github.com/dockerlocker/docker-lock/internal/testutils"
 )
 
 func TestFlagsWithSharedNames(t *testing.T) {

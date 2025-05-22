@@ -8,10 +8,10 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/safe-waters/docker-lock/internal/testutils"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/internal/testutils"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 
-	cmd_rewrite "github.com/safe-waters/docker-lock/cmd/rewrite"
+	cmd_rewrite "github.com/dockerlocker/docker-lock/cmd/rewrite"
 )
 
 func TestRewriter(t *testing.T) {
