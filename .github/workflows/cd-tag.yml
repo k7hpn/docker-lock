@@ -25,16 +25,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: setup qemu
-        uses: docker/setup-qemu-action@v1
+        uses: docker/setup-qemu-action@v3
 
       - name: setup docker buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v3
 
-#      - name: login to dockerhub
-#        uses: docker/login-action@v1 
-#        with:
-#          username: ${{ secrets.DOCKERHUB_SAFE_WATERS_USERNAME }}
-#          password: ${{ secrets.DOCKERHUB_SAFE_WATERS_PASSWORD }}
+      - name: login to container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: set image tag
         run: |
@@ -44,20 +45,21 @@ jobs:
           echo "TAG=${TAG}" >> "${GITHUB_ENV}"
         shell: bash
 
-      - name: build scratch images and push to dockerhub
-        uses: docker/build-push-action@v2
+      - name: build scratch images and push
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: Dockerfile.scratch
-          push: false
-          tags: dockerlocker/docker-lock:${{ env.TAG }}
+          push: true
+          tags: ghcr.io/${{ github.repository }}:${{ env.TAG }}
           platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
 
-      - name: build alpine images and push to dockerhub
-        uses: docker/build-push-action@v2
+      - name: build alpine images and push
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: Dockerfile.alpine
-          push: false
-          tags: dockerlocker/docker-lock:${{ env.TAG }}-alpine
+          push: true
+          tags: ghcr.io/${{ github.repository }}:${{ env.TAG }}-alpine
           platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
+
