@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:latest
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ARG GO_VERSION=1.16.5
 ARG GOLANGCI_LINT_VERSION=1.27.0

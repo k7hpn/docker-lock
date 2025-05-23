@@ -20,7 +20,7 @@ jobs:
       - name: build go binaries
         uses: goreleaser/goreleaser-action@v2
         with:
-          args: build --snapshot --rm-dist
+          args: build --snapshot --clean
 
       - name: setup qemu
         uses: docker/setup-qemu-action@v1
