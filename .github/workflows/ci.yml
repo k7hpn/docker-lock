@@ -20,12 +20,12 @@ jobs:
         run: docker build -t devcontainer ./.devcontainer
         shell: bash
 
-      - name: make lint
-        run: docker run -v "${PWD}:/workspaces/docker-lock" devcontainer make lint
-        shell: bash
-
       - name: make format
         run: docker run -v "${PWD}:/workspaces/docker-lock" devcontainer make format
+        shell: bash
+
+      - name: make lint
+        run: docker run -v "${PWD}:/workspaces/docker-lock" devcontainer make lint
         shell: bash
 
       - name: make unittest
