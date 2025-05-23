@@ -20,7 +20,7 @@ jobs:
       - name: build go binaries and release to github
         uses: goreleaser/goreleaser-action@v2
         with:
-          args: release --rm-dist
+          args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
