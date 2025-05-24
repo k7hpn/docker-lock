@@ -7,7 +7,7 @@ RUN echo "Setting up for ${TARGETPLATFORM//\//_} in $(jq -r '.[]|select(has("tar
 RUN TARGETPLATFORM="${TARGETPLATFORM//\//_}" && \
 	TARGETPATH=$(jq -r '.[]|select(has("target"))|select(.target | startswith("${TARGETPLATFORM}")).path' dist/artifacts.json) && \
     mkdir prod && \
-    mv "dist/docker-lock_${TARGETPATH}/docker-lock" prod/
+    mv "${TARGETPATH}" prod/
 
 FROM scratch AS prod
 ARG TARGETPLATFORM
