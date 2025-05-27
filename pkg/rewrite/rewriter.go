@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"reflect"
 
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 type rewriter struct {
@@ -53,7 +53,7 @@ func (r *rewriter) RewriteLockfile(
 	}
 
 	tempDir = filepath.Join(tempDir, "temp-rewrite")
-	if err := os.MkdirAll(tempDir, 0700); err != nil { // nolint: gomnd
+	if err := os.MkdirAll(tempDir, 0700); err != nil { //nolint:mnd
 		return err
 	}
 

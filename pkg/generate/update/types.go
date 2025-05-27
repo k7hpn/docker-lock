@@ -1,7 +1,7 @@
 // Package update provides functionality to update images with digests.
 package update
 
-import "github.com/safe-waters/docker-lock/pkg/generate/parse"
+import "github.com/dockerlocker/docker-lock/pkg/generate/parse"
 
 // IImageDigestUpdater provides an interface for ImageDigestUpdaters, which
 // update images with their digests.

@@ -17,11 +17,8 @@ lint:
 	@echo "running shellcheck..."
 	@find . -name '*.sh' -print0 | xargs -n1 -0 shellcheck
 	@echo "shellcheck passed!"
-	@echo "running gofmt (without persisting modifications)..."
-	@[[ $$(gofmt -s -l . | wc -c) -eq 0 ]];
-	@echo "gofmt passed!"
 	@echo "running golangci-lint..."
-	@golangci-lint run --timeout 5m0s
+	@GOFLAGS=-buildvcs=false golangci-lint run --timeout 5m0s
 	@echo "golangci-lint passed!"
 	@echo "lint target passed!"
 

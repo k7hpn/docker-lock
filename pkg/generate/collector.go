@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/safe-waters/docker-lock/pkg/generate/collect"
+	"github.com/dockerlocker/docker-lock/pkg/generate/collect"
 )
 
 type pathCollector struct {

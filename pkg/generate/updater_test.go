@@ -3,11 +3,11 @@ package generate_test
 import (
 	"testing"
 
-	"github.com/safe-waters/docker-lock/internal/testutils"
-	"github.com/safe-waters/docker-lock/pkg/generate"
-	"github.com/safe-waters/docker-lock/pkg/generate/parse"
-	"github.com/safe-waters/docker-lock/pkg/generate/update"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/internal/testutils"
+	"github.com/dockerlocker/docker-lock/pkg/generate"
+	"github.com/dockerlocker/docker-lock/pkg/generate/parse"
+	"github.com/dockerlocker/docker-lock/pkg/generate/update"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 func TestImageDigestUpdater(t *testing.T) {

@@ -1,7 +1,7 @@
 // Package diff provides functionality to diff an image.
 package diff
 
-import "github.com/safe-waters/docker-lock/pkg/kind"
+import "github.com/dockerlocker/docker-lock/pkg/kind"
 
 // IImageDifferentiator provides an interface for ImageDifferentiators, which
 // are responsible for reporting the difference between an image in the existing

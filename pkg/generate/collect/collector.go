@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 	"github.com/mattn/go-zglob"
-	"github.com/safe-waters/docker-lock/pkg/kind"
 )
 
 type pathCollector struct {

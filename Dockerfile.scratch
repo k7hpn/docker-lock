@@ -2,11 +2,11 @@ FROM alpine AS build
 ARG TARGETPLATFORM
 WORKDIR build
 COPY dist/ dist/
-RUN apk --no-cache add ca-certificates && \
+RUN apk --no-cache add ca-certificates jq && \
     TARGETPLATFORM="${TARGETPLATFORM//\//_}" && \
     TARGETPLATFORM="${TARGETPLATFORM//v/}" && \
     mkdir prod && \
-    mv "dist/docker-lock_${TARGETPLATFORM}/docker-lock" prod/
+    mv "$(jq --arg TP ${TARGETPLATFORM} -r '.[]|select(has("target"))|select(.target | startswith($TP)).path' dist/artifacts.json)" prod/
 
 FROM scratch AS prod
 ARG TARGETPLATFORM

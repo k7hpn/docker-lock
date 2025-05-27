@@ -1,73 +1,54 @@
+version: "2"
 linters:
-  disable-all: true
+  default: none
   enable:
-    # for more info, run -> golangci-lint help linters
-    # to enable all, run -> golangci-lint run --enable-all
-    - deadcode
-    - errcheck
-    - gosimple
-    - govet
-    - ineffassign
-    - staticcheck
-    - structcheck
-    - typecheck
-    - unused
-    - varcheck
     - bodyclose
-    - depguard
+#    - depguard
     - dogsled
+    - dupl
+    - errcheck
     - gochecknoglobals
     - gochecknoinits
     - goconst
     - gocritic
     - godox
-    - gofmt
-    - goimports
-    - golint
-    - gomnd
     - goprintffuncname
-    - interfacer
+    - govet
+    - ineffassign
     - lll
-    - maligned
     - misspell
+    - mnd
     - nakedret
     - prealloc
     - rowserrcheck
-    - scopelint
-    - stylecheck
+    - staticcheck
     - unconvert
     - unparam
+    - unused
     - whitespace
-    - wsl
-    - dupl
-
-    # potentially enable in the future
-    # - gocognit
-    # - gocyclo
-
-    # useless
-    # - funlen
-    # - gosec
-
-run:
-linters-settings:
-  golint:
-    # minimal confidence for issues, default is 0.8
-    min-confidence: 0
-  govet:
-    # report about shadowed variables
-    check-shadowing: true
-  lll:
-    # max line length, lines longer will be reported. Default is 120.
-    # '\t' is counted as 1 character by default, 
-    # and can be changed with the tab-width option
-    line-length: 80
-    tab-width: 4
-
-output:
-  # print lines of code with issue
-  print-issued-lines: false
-
-service:
-  # use the fixed version to not introduce new linters unexpectedly
-  golangci-lint-version: 1.24.0
+#    - wsl
+  settings:
+    lll:
+      line-length: 80
+      tab-width: 4
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

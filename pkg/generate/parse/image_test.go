@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/safe-waters/docker-lock/internal/testutils"
-	"github.com/safe-waters/docker-lock/pkg/generate/parse"
-	"github.com/safe-waters/docker-lock/pkg/kind"
+	"github.com/dockerlocker/docker-lock/internal/testutils"
+	"github.com/dockerlocker/docker-lock/pkg/generate/parse"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 )
 
 func TestImage(t *testing.T) {

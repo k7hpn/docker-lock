@@ -1,7 +1,7 @@
 // Package write provides functionality to write files with image digests.
 package write
 
-import "github.com/safe-waters/docker-lock/pkg/kind"
+import "github.com/dockerlocker/docker-lock/pkg/kind"
 
 // IWriter provides an interface for Writers, which are responsible for
 // writing files with information from a Lockfile to paths in outputDir.

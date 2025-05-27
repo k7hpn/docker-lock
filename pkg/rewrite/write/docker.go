@@ -9,9 +9,9 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/dockerlocker/docker-lock/pkg/generate/parse"
+	"github.com/dockerlocker/docker-lock/pkg/kind"
 	"github.com/moby/buildkit/frontend/dockerfile/parser"
-	"github.com/safe-waters/docker-lock/pkg/generate/parse"
-	"github.com/safe-waters/docker-lock/pkg/kind"
 )
 
 type dockerfileWriter struct {
