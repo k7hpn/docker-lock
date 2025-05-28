@@ -6,10 +6,11 @@ RUN apk --no-cache add ca-certificates jq && \
     TARGETPLATFORM="${TARGETPLATFORM//\//_}" && \
     TARGETPLATFORM="${TARGETPLATFORM//v/}" && \
     mkdir prod && \
+    echo "Target platform: ${TARGETPLATFORM}" && \
     echo "Copying $(jq --arg TP ${TARGETPLATFORM} -r '.[]|select(has("target"))|select(.target | startswith($TP)).path' dist/artifacts.json) to prod..." && \
     ls dist && \
     du -h $(jq --arg TP ${TARGETPLATFORM} -r '.[]|select(has("target"))|select(.target | startswith($TP)).path' dist/artifacts.json) && \
-    mv "$(jq --arg TP ${TARGETPLATFORM} -r '.[]|select(has("target"))|select(.target | startswith($TP)).path' dist/artifacts.json)" prod/
+    cp "$(jq --arg TP ${TARGETPLATFORM} -r '.[]|select(has("target"))|select(.target | startswith($TP)).path' dist/artifacts.json)" prod/
 
 FROM scratch AS prod
 ARG TARGETPLATFORM
