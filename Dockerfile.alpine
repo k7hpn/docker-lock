@@ -6,8 +6,8 @@ RUN apk --no-cache add ca-certificates jq && \
     TARGETPLATFORM="${TARGETPLATFORM//\//_}" && \
     TARGETPLATFORM="${TARGETPLATFORM//v/}" && \
     mkdir /prod && \
-    mv "$(jq -r --arg TP ${TARGETPLATFORM} '.[]|select(has("target"))|select(.target | startswith($TP)).path' dist/artifacts.json)" /prod/ && \
-    rm -rf /build
+    for file in $(jq -r --arg TP ${TARGETPLATFORM} '.[]|select(has("target"))|select(.target | startswith($TP)).path' dist/artifacts.json); do mv "$file" /prod/; done;
+RUN rm -rf /build
 WORKDIR /run
 ENTRYPOINT ["/prod/docker-lock"]
 
