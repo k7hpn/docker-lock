@@ -1,0 +1,19 @@
+name: Clean up containers
+run-name: ${{ github.actor }} is cleaning up containers
+
+on:
+  schedule:
+    - cron: "0 3 15 * *"
+  workflow_dispatch:
+
+jobs:
+  clean-up-containers:
+    name: ghcr.io cleanup action
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: dataaxiom/ghcr-cleanup-action@v1
+      with:
+        delete-untagged: true
+        dry-run: true
+
